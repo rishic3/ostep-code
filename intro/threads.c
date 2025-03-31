@@ -9,15 +9,15 @@ int loops;
 void *worker(void *arg) {
     int i;
     for (i = 0; i < loops; i++) {
-	counter++;
+	    counter++;
     }
     return NULL;
 }
 
 int main(int argc, char *argv[]) {
     if (argc != 2) { 
-	fprintf(stderr, "usage: threads <loops>\n"); 
-	exit(1); 
+        fprintf(stderr, "usage: threads <loops>\n"); 
+        exit(1); 
     } 
     loops = atoi(argv[1]);
     pthread_t p1, p2;
